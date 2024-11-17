@@ -36,6 +36,7 @@ body{
     width: 300px;
     height: 40px;
     padding-left: 10px;
+    margin-bottom: 20px;
 }
 
 .btn-add-task{
