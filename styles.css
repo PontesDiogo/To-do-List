@@ -21,10 +21,10 @@ img{
 
 .container{
     background-color: #d1d1d1;
-    width: 500px;
+    width: 700px;
     border-radius: 10px;
     padding: 20px;
-    margin: 100px auto 0
+    margin: 100px auto 0;
 }
 
 body{
@@ -33,7 +33,7 @@ body{
 .input-task{
     border: none;
     border-radius: 5px;
-    width: 300px;
+    width: 500px;
     height: 40px;
     padding-left: 10px;
     margin-bottom: 20px;
@@ -67,25 +67,137 @@ body{
     margin-top: 30px;
 }
 
-.task{
+
+
+.task:hover img{
+    opacity: 1;
+}
+
+
+.edit-task-btn{
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #003329;
+    color: #FFFFFF;
+    padding: 0 15px;
+    font-size: 17px;
+    float:right;
+    padding: 0 15px;
+    cursor: pointer;
+    font-weight: 700;
+    
+}
+.done{
+    background-color: #8FAC55 !important;
+    text-decoration: line-through;
+}
+
+
+.edit-task-btn:hover{
+    opacity: 0.8;
+}
+
+.edit-task-btn:active{
+    opacity: 0.6;
+}
+
+.div-tasks{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; 
+
+}
+.task {
     background-color: #F2F2F2;
     box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
+    justify-content: space-between; /* Garante que os itens sejam distribuídos */
+    padding: 0 15px; /* Espaço interno do contêiner */
     border-radius: 5px;
     margin-bottom: 20px;
     cursor: pointer;
-    
+    position: relative; /* Define um contêiner base para posicionamento */
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre texto e ícones */
+    flex-grow: 1; /* Expande para ocupar o espaço necessário */
+    max-width: calc(100% - 100px); /* Evita que o texto ocupe o espaço do botão */
+}
+
+.task-text {
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap; /* Evita quebra de linha */
+    overflow: hidden; /* Esconde texto extra */
+    text-overflow: ellipsis; /* Mostra "..." se o texto for muito longo */
+}
+
+.edit-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.edit-input-container{
+    display: flex;
+    width: 500px;
 
 }
 
-.task:hover img{
-    opacity: 1;
+.edit-input{
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+
 }
-.done{
-    background-color: #8FAC55;
-    text-decoration: line-through;
+
+.save-task-icon,
+.cancel-task-icon {
+    cursor: pointer;
+    font-size: 25px;
+    display: flex;
+    margin-top: 7px;
+    padding: 0 2px;
+
+}
+
+.save-task-icon {
+    color: #005f46; /* Verde para salvar */
+}
+
+.cancel-task-icon {
+    color: #FF0000; /* Vermelho para cancelar */
+}
+
+.save-task-icon:hover {
+    color: #008c5b; /* Verde mais claro ao passar o mouse */
+}
+
+.cancel-task-icon:hover {
+    color: #cc0000; /* Vermelho mais claro ao passar o mouse */
+}
+
+.edit-task-btn {
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    background-color: #003329;
+    color: #FFFFFF;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%); 
+    z-index: 1; 
 }
