@@ -65,6 +65,12 @@ function reloadTasks(){
 reloadTasks()
 button.addEventListener('click',addTask)
 
+input.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        addTask(); // Chama a função de adicionar tarefa
+    }
+});
+
 
 
 
